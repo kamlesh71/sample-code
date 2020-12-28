@@ -1,0 +1,311 @@
+@import "./../../scss/variables.scss";
+@import "./../../scss/mixin.scss";
+
+.searchForm {
+    background-color: white;
+}
+
+.header {
+    background-color: $purple;
+
+    .logo {
+        width:px-to-rem(142);
+
+        img {
+            width:100%;
+        }
+    }
+
+    .navWrapper {
+        width:100%;
+    }
+
+    .navLeft {
+        a {
+            &:after {
+                content: "|";
+                color: $white;
+                position: absolute;
+                right: px-to-rem(-10);
+            }
+        
+            &:last-child {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .navRight {
+
+        .userNav {
+            position: relative;
+           
+        }
+        
+        .userImg {
+            width:px-to-rem(60);
+            height:px-to-rem(60);
+            border-radius:50%;
+            margin:0;
+            padding: 0;
+    
+            img {
+                width:100%;
+                border-radius:50%;
+            }
+        }
+    }
+
+    .navSearchWrapper {
+        margin-right: px-to-rem(5);
+    }
+
+    button {
+        margin: 0 px-to-rem(5);
+    }
+}
+
+.footer {
+    .footerMain {
+        border-bottom: 2px solid $darkGrey;
+    }
+
+    .footerTop {
+       padding:px-to-rem(30);
+       
+       .newsletterContent {
+           display: flex;
+           align-items: center;
+           
+            .imgWrapper {
+                width:px-to-rem(115);
+                height:px-to-rem(115);
+                border-radius: 50%;
+                background-color: $darkGrey;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: px-to-rem(30);
+    
+                img {
+                    width:px-to-rem(55);
+                }
+            }
+            
+            .contentWrapper {
+                flex:1;
+                color:$lightWhite;
+                padding-right: px-to-rem(40);
+
+
+                h3 {
+                    font-size: px-to-rem(24);
+                    text-transform: uppercase;
+                    font-weight: 700;
+                }
+
+                p {
+                    font-size: px-to-rem(18);
+                    font-weight: 300;
+                    color:$lightWhite;
+                    margin-bottom: 0;
+                }
+            }
+       }
+    }
+
+    .footerMiddle {
+        padding: px-to-rem(70) 0 px-to-rem(65);
+
+        h3 {
+            font-size: px-to-rem(20);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: px-to-rem(25);
+            color: $primary;
+        }
+
+        ul {
+            margin:0;
+            padding: 0;
+
+            li {
+                list-style-type: none;
+                margin-bottom: px-to-rem(25);
+
+                a {
+                    text-transform: capitalize;
+                    font-size: px-to-rem(16);
+                    font-weight: 400;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .aboutContent {
+            p {
+                font-size: px-to-rem(16);
+            }
+        }
+
+        .socialLinks {
+            margin-top: px-to-rem(34);
+
+            ul {
+                display: flex;
+                align-items: center;
+
+                li {
+                    margin: px-to-rem(10);
+
+                    a {
+                        color:$darkenGrey;
+                        font-size: px-to-rem(20);
+                    }
+
+                    &:hover {
+
+                        .facebook {
+                            color: $facebook;
+                        }
+
+                        .twitter {
+                            color: $twitter;
+                        }
+
+                        .linkedin {
+                            color: $linkedin;
+                        }
+
+                        .instagram {
+                            svg {
+                                background:$instagram;
+                                border-radius: 5px;
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .footerMenu {
+            float: right;
+        }
+    }
+
+    .footerBottom {
+        padding: px-to-rem(25) 0;
+
+        .copyright {
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+        .footerLogo {
+            width:px-to-rem(145);
+
+            img {
+                width:100%;
+            }
+        }
+    }
+}
+
+
+//media query for mobile screen
+
+@media (max-width: 767.98px) { 
+
+    .header {
+        .navSearchWrapper {
+            width:100%;
+        }
+
+        .navLeft, .navRight {
+            width: 100%;
+        }
+    }
+
+
+    .footer {
+
+        .footerTop {
+            .newsletterContent {
+                flex-direction: column;
+                text-align: center;
+                margin-bottom: px-to-rem(20);
+
+                .imgWrapper {
+                    margin-right: 0;
+                    margin-bottom: px-to-rem(10);
+                    width: px-to-rem(55);
+                    height: px-to-rem(55);
+
+                    img {
+                        width:px-to-rem(25);
+                    }
+                }
+
+                .contentWrapper {
+                    padding-right: 0;
+                }
+            }
+        }
+
+        .footerMiddle {
+            .footerMenu {
+                float: left;
+                margin-top: px-to-rem(34);
+            }
+        }
+
+        .footerBottom {
+            .footerLogo {
+                width:px-to-rem(100);
+            }
+        }
+    }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { 
+    .header {
+
+        .navWrapper {
+            padding: px-to-rem(20) 0;
+        }
+
+        .navLeft {
+            padding:px-to-rem(10) 0;
+
+            a {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+
+        .navRight {
+            border-top: 1px solid $darkenGrey;
+            padding:px-to-rem(10) 0;
+
+            .userImg {
+                width:px-to-rem(30);
+                height:px-to-rem(30);
+            }
+
+            button {
+                margin: px-to-rem(10) 0 0;
+            }
+        }
+    }
+
+    
+}
+
+
+

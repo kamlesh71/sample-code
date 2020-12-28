@@ -1,0 +1,42 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixin.scss";
+
+.HomePageBanner {
+    padding: px-to-rem(115) 0 px-to-rem(103);
+}
+
+.InnerPageBanner {
+    padding: px-to-rem(140) 0 px-to-rem(135);
+}
+
+.pageBanner {
+    background-color: $primary;
+
+    .contentWrapper {
+        //padding:0 px-to-rem(100);
+        margin: 0 auto;
+        max-width: px-to-rem(1150);
+    }
+
+    h1 {
+        font-size: px-to-rem(53);
+        color: $white;
+        font-weight: 700;
+        text-align: center;
+        line-height: px-to-rem(78);
+        margin-bottom: 0;
+    }
+}
+
+// Small devices (landscape phones, less than 768px)
+
+@media (max-width: 767.98px) {
+    .pageBanner {
+        padding: px-to-rem(70) 0;
+
+        h1 {
+            font-size: px-to-rem(32);
+            line-height: px-to-rem(50);
+        }
+    }
+}

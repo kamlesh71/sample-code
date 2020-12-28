@@ -1,0 +1,28 @@
+@import "./../../scss/variables.scss";
+@import "./../../scss/mixin.scss";
+
+.cookieWrapper {
+    max-width: px-to-rem(400);
+    padding: px-to-rem(20);
+    overflow: hidden;
+    position: fixed;
+    z-index: 1500;
+    bottom: px-to-rem(20);
+    left: px-to-rem(20);
+    box-shadow: $lightShadow;
+    background-color: rgba(0,0,0,0.9);
+
+    p {
+        color: $white;
+    }
+
+    a {
+        color: $white;
+        text-decoration: underline;
+
+        &:hover {
+            color: $secondary;
+        }
+    }
+    
+}

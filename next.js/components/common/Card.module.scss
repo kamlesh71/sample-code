@@ -1,0 +1,66 @@
+@import "../../scss/variables";
+@import "../../scss/mixin";
+
+// common css for auth pages
+
+.authSection {
+    padding: px-to-rem(78) 0 px-to-rem(92);
+}
+
+.authHeading {
+    text-align: center;
+    width: 100%;
+    //margin: px-to-rem(0) 0 px-to-rem(34);
+
+    h2 {
+        font-size: px-to-rem(30);
+        color: $primary;
+        margin-bottom: 0;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: px-to-rem(18);
+        color: $primary;
+        margin-bottom: 0;
+        line-height: 1.3;
+    }
+}
+
+.messageWrapper {
+    
+    .authSection {
+        padding: px-to-rem(100) 0 px-to-rem(100);
+        text-align: center;
+    }
+
+    .messageContent {
+        padding: px-to-rem(30) 0;
+    
+        p {
+            font-size: px-to-rem(26);
+            margin-bottom: 0;
+            line-height: 1.3;
+        }
+    
+        h2 {
+            font-size: px-to-rem(30);
+            color: $primary;
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.userProfile {
+    .userSection {
+        padding: px-to-rem(78) 0 px-to-rem(70);
+    }
+    
+    .authCard {
+        background: url("../../assets/images/auth/user-profile-bg.png?webp") no-repeat;
+        background-position: top;
+    }    
+}
+
+

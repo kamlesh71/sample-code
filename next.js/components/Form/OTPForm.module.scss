@@ -1,0 +1,67 @@
+@import "../../scss/variables";
+@import "../../scss/mixin";
+
+// OTP css
+
+.otpWrapper {
+    text-align: center;
+
+    .heading {
+        margin-top: px-to-rem(80);
+    }
+
+    .btnWrapper {
+        margin: 0 px-to-rem(50) px-to-rem(80);
+    }
+}
+
+.otpContainer {
+    justify-content: center;
+    margin: px-to-rem(60) 0;
+
+    div {
+        &:first-child {
+            input {
+                margin-left: 0;
+            }
+        }
+    
+        &:last-child {
+            input {
+                margin-right: 0;
+            }
+        }
+    }
+
+    input {
+        width: px-to-rem(68) !important;
+        height: px-to-rem(68);
+        margin: 0 px-to-rem(16);
+        border-radius: 4px;
+        border: 1px solid rgba(0,0,0,0.3);
+
+        &:focus {
+            outline: $primary auto 3px;
+        }
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+
+    .otpWrapper {
+        .btnWrapper {
+            margin: 0 0 px-to-rem(80);
+        }
+    }
+    
+
+    .otpContainer { 
+        input {
+            margin: 0 px-to-rem(2);
+            width: px-to-rem(45) !important;
+            height: px-to-rem(45);
+        }
+    }
+    
+}

@@ -1,0 +1,329 @@
+@import "./fonts";
+@import "./mixin";
+@import "./variables";
+@import "~bootstrap/scss/bootstrap";
+@import "~nprogress/nprogress.css";
+@import './toast';
+@import "~react-phone-number-input/style.css";
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: "Roboto Slab", sans-serif;
+}
+
+section {
+    padding: px-to-rem(60) 0;
+}
+
+p {
+    font-size: px-to-rem(16);
+    color: $primary;
+}
+
+//background color
+
+.bg-grey {
+    background-color: $lightGrey;
+}
+
+.bg-lightenGrey {
+    background-color: $lightenGrey;
+}
+
+//pagination
+
+.pagination {
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+
+    .page-link {
+        @include margin-horizental(5);
+        font-size: px-to-rem(18);
+        min-width: px-to-rem(30);
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    .active {
+        .page-link {
+            background-color: $secondary;
+            border-color: $secondary;
+        }
+    }
+}
+
+//navbar
+
+.navbar-toggler {
+    padding: $navbar-toggler-padding-y $navbar-toggler-padding-x;
+    border: 0; 
+}
+
+.navbar-dark {
+    background-color: $purple;
+}
+
+.nav-link {
+    font-size: px-to-rem(18);
+    font-weight: 400;
+    margin: 0 px-to-rem(10);
+    position: relative;
+}
+
+.dropdown {
+    position: initial;
+}
+
+.dropdown-menu  {
+    padding: 10px;
+    min-width: px-to-rem(215);
+    background-color: $transparentPink;
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: -8px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid rgba(219, 26, 143, 0.8);
+        z-index: 10;
+        display: inline-block;
+     }
+
+    .dropdown-item {
+        color:$white;
+        padding-left: px-to-rem(10);
+        padding-right: px-to-rem(10);
+
+        &:hover, &:focus {
+            color:$primary;
+            background-color: transparent;
+        }
+    }
+}
+
+// navbar tabs
+
+.nav-tabs {
+    flex-direction: row;
+
+    .nav-link {
+        padding: 0.5rem 1rem;
+        margin: 0;
+        border: $nav-tabs-border-width solid #ced4da;
+    }
+}
+
+.tab-content {
+    border: 1px solid #ced4da;
+    padding: px-to-rem(15);
+
+}
+
+//modal
+
+.modal-dialog {
+    .modal-content {
+        max-width: px-to-rem(740);
+        margin: 0 auto;
+    }
+
+    .modal-header {
+        border: 0;
+    }
+}
+
+//form
+
+.auth-form {
+    text-align: center;
+
+    .form-group {
+        text-align: left;
+        margin-bottom: px-to-rem(38);
+    }
+
+}
+
+.update-form {
+    .form-group {
+        margin-bottom: px-to-rem(25);
+    }
+}
+
+// buttons
+
+.btn-facebook {
+    @include button-variant($facebook, $facebook);
+}
+
+.btn-twitter {
+    @include button-variant($twitter, $twitter);
+}
+
+.btn-linkedin {
+    @include button-variant($linkedin, $linkedin);
+}
+
+.btn-google {
+    @include button-variant($google, $google);
+}
+
+.btn-facebook,
+.btn-twitter,
+.btn-linkedin,
+.btn-google {
+    //@include button-size(px-to-rem(15), px-to-rem(10), px-to-rem(16), $btn-line-height-lg, $btn-border-radius-lg);
+    @include button-size(px-to-rem(10), px-to-rem(8), px-to-rem(14), $btn-line-height-lg, $btn-border-radius-lg);
+}
+
+.btn-search {
+    @include button-variant($secondary, $secondary);
+    @include button-size(px-to-rem(7.5), px-to-rem(36), $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+}
+
+.btn-auth {
+    @include button-variant($secondary, $secondary);
+    @include button-size($btn-padding-y-lg, $btn-padding-x-lg, px-to-rem(24), $btn-line-height-lg, px-to-rem(5));
+}
+
+.btn-fontLarge {
+    @include button-variant($secondary, $secondary);
+    @include button-size(px-to-rem(11), px-to-rem(20), px-to-rem(24), $btn-line-height-lg, $btn-border-radius-lg);
+}
+
+//input
+
+.form-control-sm {
+    height: $input-height-sm;
+    // padding: $input-padding-x-sm;
+    @include font-size($input-font-size-sm);
+    @include border-radius($input-border-radius, 0);
+    color: $input-color;
+}
+
+.form-control-lg {
+    color: $input-color;
+    @include border-radius($input-border-radius, 0);
+}
+
+.form-control-line {
+    height: px-to-rem(35);
+    padding: px-to-rem(6) px-to-rem(18);
+    @include font-size(px-to-rem(22));
+    @include border-radius(0);
+    font-weight: 700;
+    color: $primary;
+    border:0;
+    border-bottom: px-to-rem(2) solid $secondary;
+
+    &:focus {
+        color: $primary;
+        border:0;
+        border-bottom: px-to-rem(2) solid $secondary;
+        box-shadow: none;
+    }
+}
+
+// input:-internal-autofill-selected {
+//     background-color: transparent !important;
+// }
+
+.form-control.is-invalid:focus {
+    box-shadow: none;
+}
+
+// footer container 
+
+@if $enable-grid-classes {
+    
+    .container-footer {
+      @include make-container();
+    }
+  
+  
+    @each $breakpoint, $container-max-width in $container-max-widths {
+      
+      @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+        %responsive-container-footer-#{$breakpoint} {
+          max-width: $container-max-width + ($container-max-width * 0.0492857143);
+        }
+
+        $extend-breakpoint: true;
+  
+        @each $name, $width in $grid-breakpoints {
+          @if ($extend-breakpoint) {
+            .container-footer#{breakpoint-infix($name, $grid-breakpoints)} {
+              @extend %responsive-container-footer-#{$breakpoint};
+            }
+  
+    
+            @if ($breakpoint == $name) {
+              $extend-breakpoint: false;
+            }
+          }
+        }
+      }
+    }
+}
+
+//nprogress color
+
+#nprogress {
+    .bar {
+        background: $secondary;
+    }
+
+    .peg {
+        box-shadow: 0 0 10px $secondary, 0 0 5px $secondary;
+    }
+}
+
+// card
+
+.shadow-card {
+    max-width: px-to-rem(765);
+    margin: 0 auto;
+    box-shadow: $shadow;
+    @include border-radius($card-border-radius);
+    border: $card-border-width solid $card-border-color;
+}
+
+.card {
+    border: 0;
+    
+    .card-body {
+        padding: $card-spacer-x;
+    }
+}
+
+// media queries
+
+@include media-breakpoint-down(xl) {
+    html {
+        font-size: 80%;
+    }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+    .collapse {
+        align-items: flex-start;
+    }
+
+    .navbar-nav {
+        .dropdown-menu {
+            position: absolute;
+        }
+    }
+}
+

@@ -1,0 +1,28 @@
+@import "../../scss/mixin";
+@import "../../scss/variables";
+
+.searchForm {
+    position: relative;
+    width:px-to-rem(200);
+
+    input {
+        color:$primary;
+        width:100% !important;
+    }
+
+    svg {
+        position: absolute;
+        right: px-to-rem(10);
+        color:$purple;
+        font-size: px-to-rem(20);
+    }
+}
+
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { 
+    .searchForm {
+        width:100%;
+    }
+ }
+

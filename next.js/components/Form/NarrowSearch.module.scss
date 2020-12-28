@@ -1,0 +1,34 @@
+@import "../../scss/variables";
+@import "../../scss/mixin";
+
+
+.narrowSearchForm {
+    label {
+        font-size: px-to-rem(18);
+        color:$primary;
+    }
+
+    input {
+        border:2px solid $darkGrey;
+        border-radius: 0;
+        
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    .formButton {
+        text-align: center;
+
+        button {
+            margin-top: px-to-rem(10);
+        }
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    .narrowSearchForm {
+        width: 100%;
+    }
+ }

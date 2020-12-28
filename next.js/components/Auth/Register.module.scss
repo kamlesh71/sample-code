@@ -1,0 +1,223 @@
+@import "../../scss/variables";
+@import "../../scss/mixin";
+
+.registerModal {
+    .registerTabLayout {
+        .modalHeading {
+            text-align: center;
+            width:100%;
+
+            h1 {
+                font-size: px-to-rem(30);
+                color: $primary;
+                font-weight: 700;
+                margin-top: px-to-rem(24);
+            }
+
+            h2 {
+                font-size: px-to-rem(18);
+                color: $primary;
+                font-weight: 400;
+            }
+        }
+
+        form {
+            margin-top: px-to-rem(25);
+            text-align: left;
+            padding: 0 px-to-rem(22);
+
+            label {
+                font-size: px-to-rem(20);
+                color: $secondary;
+                font-weight: 700;
+            }
+        }
+
+    }
+
+    .tabWrapper {
+
+        .iconWrapper {
+            height: px-to-rem(75);
+            width: px-to-rem(75);
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $white;
+            border-radius: 50%;
+
+            svg {
+                font-size: px-to-rem(35) !important;
+                color:$secondary;
+            }
+        }
+
+        .contentWrapper {
+            h4 {
+                color:$white;
+                font-size: px-to-rem(20);
+                font-weight: 700;
+                margin: px-to-rem(15) 0;
+            }
+
+            p {
+                font-size: px-to-rem(16);
+                color:$white;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .tabActive {
+        background-color: $primary !important;
+
+        .iconWrapper {
+            svg {
+                color: $primary;
+            }
+        }
+    }
+   
+    .registerFormWrapper {
+
+        .modalHeading {
+            text-align: center;
+            width:100%;
+    
+            h1 {
+                font-size: px-to-rem(34);
+                font-weight: 700;
+                color:$grey;
+                margin-bottom: px-to-rem(20);
+            }
+    
+            h2 {
+                font-size: px-to-rem(22);
+                font-weight: 700;
+                color:$secondary;
+                margin-bottom: 0;
+            }
+    
+            p {
+                font-size: px-to-rem(16);
+                color:$darkenGrey;
+                margin-bottom: 0;
+    
+                button {
+                    font-weight: 500;
+                    border:0;
+    
+                    &:hover, &:focus {      
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+
+    }
+    
+        form {
+            padding: 0 px-to-rem(34);
+            text-align: center;
+    
+            button {
+                margin-bottom: px-to-rem(40);
+            }
+    
+            p {
+                color: $darkenGrey;
+                margin-bottom: px-to-rem(40);
+            }
+        }
+    
+        .orWrapper {
+            text-align: center;
+            margin-bottom: px-to-rem(35);
+            
+            h3 {
+                font-size: px-to-rem(26);
+                color:#5c5c5c;
+                font-family: 'Raleway', sans-serif;
+                font-weight:500;
+                margin-bottom: 0;
+                font-style: italic;
+                position: relative;
+    
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    display: block;
+                    width:45%;
+                    background-image:linear-gradient(to left, #b3b4b5, #ffffff);
+                    height:px-to-rem(4);
+                }
+                
+                &:after {
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    display: block;
+                    width:45%;
+                    background-image:linear-gradient(to right, #b3b4b5, #ffffff);
+                    height:px-to-rem(4);
+                }
+            }
+        }
+    
+        .socialLinks {
+            margin-bottom: px-to-rem(14);
+    
+            svg {
+                margin-right: px-to-rem(3);
+                // font-size: px-to-rem(20);
+                font-size: px-to-rem(22);
+            }
+    
+            
+        }
+    
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    .registerModal {
+
+        .modalHeading {
+            h1 {
+                margin-bottom: px-to-rem(15);
+                font-size: px-to-rem(30);
+            }
+
+            h2 {
+                font-size: px-to-rem(20);
+            }
+        }
+
+        form {
+            padding: 0;
+
+            p {
+                margin-bottom: px-to-rem(20);
+            }
+
+            button {
+                margin-bottom: px-to-rem(20);
+            }
+        }
+
+    }
+}
+
+// @media (max-width: 1599.98px) { 
+//     .registerModal {
+//         .socialLinks {
+//             svg {
+//                 margin-right: px-to-rem(5);
+//             }
+//         }
+//     }
+// }

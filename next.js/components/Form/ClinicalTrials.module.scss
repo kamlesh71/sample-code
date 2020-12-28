@@ -1,0 +1,128 @@
+@import "../../scss/variables";
+@import "../../scss/mixin";
+
+.formHeading {
+    color:$white;
+    font-size: px-to-rem(24);
+}
+
+.formWrapper {
+
+    input, select {
+         color:$purple;
+         border-radius: px-to-rem(6);
+         width:100%;
+         font-family: "Roboto Slab", sans-serif;     
+    }
+
+    input {
+         &::placeholder {
+             color:$purple;
+         }
+    }
+
+    select {
+         -webkit-appearance: none;
+         -moz-appearance: none;
+         appearance: none; 
+         position: relative;
+    }
+
+    .iconWrapper {
+         position: absolute;
+         right: 0;
+         top:0;
+         bottom: 0;
+         width:px-to-rem(45);
+         background-color: $secondary;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         border-bottom-right-radius: px-to-rem(6);
+         border-top-right-radius: px-to-rem(6);
+
+         svg {
+             font-size:px-to-rem(18);
+             color: $white;
+         }
+    }
+
+    button {
+        font-size: px-to-rem(22);
+        padding-left: px-to-rem(30);
+        padding-right: px-to-rem(30);
+        border-radius: px-to-rem(6);
+    }
+ }
+
+.clinicalTrialsVertical {
+    .formHeading {
+        font-weight: bold;
+        margin-bottom: px-to-rem(30);
+    }
+
+    .formWrapper {
+        label {
+            color:$white;
+            font-size: px-to-rem(18);
+            font-weight: 400;
+    
+            &:after {
+                content:':';
+            }
+        }
+
+        button {
+            margin-top: px-to-rem(19);
+        }
+    }
+}
+
+.clinicalTrialsHorizontal {
+    background-color: $transparentBlack;
+    padding: px-to-rem(25);
+    text-align: center;
+    margin: px-to-rem(100) auto 0;
+    max-width: px-to-rem(1070);
+    border-radius: px-to-rem(8);
+
+    .formHeading {
+        margin-bottom: px-to-rem(40);
+    }
+
+    .formWrapper {
+        .colWrapper {
+            margin-right: px-to-rem(20);
+            position: relative;
+        }
+
+        button {
+            margin-top: px-to-rem(45);
+            margin-bottom: px-to-rem(10);
+        }
+    }
+}
+
+//media query for small screen
+
+@media (max-width: 767.98px) { 
+
+    .clinicalTrialsHorizontal {
+        margin: px-to-rem(50) auto 0;
+
+        .formWrapper {
+            .colWrapper {
+                margin-right: 0;
+            }
+
+            input, select {
+                margin-bottom: px-to-rem(20);
+            }
+
+            button {
+                margin-top: 0;
+                width:100%;
+            }
+        }
+    }
+}

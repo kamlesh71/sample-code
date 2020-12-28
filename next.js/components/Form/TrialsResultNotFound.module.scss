@@ -1,0 +1,86 @@
+@import "../../scss/variables";
+@import "../../scss/mixin";
+
+.advanceSearch {
+
+    .heading {
+    
+        h2 {
+            font-size: px-to-rem(30);
+            text-align: center;
+            font-weight: 700;
+            color:$primary;
+            margin-bottom: 0;
+        }
+
+        h3 {
+            font-size: px-to-rem(30);
+            color: $secondary;
+            text-align: center;
+            margin-bottom: px-to-rem(32);
+            font-weight: 500;
+        }
+    }
+
+    h4 {
+        font-size: px-to-rem(30);
+        color: $primary;
+        text-align: center;
+        font-weight: 400;
+        margin-bottom: px-to-rem(20);
+    }
+}
+
+.advanceSearchForm {
+    label {
+        font-size: px-to-rem(18);
+        color:$primary;
+        font-weight: bold;
+    }
+
+    .formButton {
+        text-align: center;
+
+        button {
+            margin-top: px-to-rem(10);
+        }
+    }
+}
+
+.formWrapper {
+    margin:0 auto;
+    padding:px-to-rem(26) px-to-rem(30);
+    background-color: $lightGrey;
+    border:2px solid $darkGrey;
+
+    p {
+        text-align: center;
+        font-size: px-to-rem(18);
+        line-height: 1.3;
+    }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { 
+    .advanceSearch {
+
+        .heading {
+    
+            h3 {
+                font-size: px-to-rem(24);
+                color: $secondary;
+                text-align: center;
+                margin-bottom: px-to-rem(32);
+                font-weight: 500;
+            }
+        }
+    
+        h4 {
+            font-size: px-to-rem(20);
+            color: $primary;
+            text-align: center;
+            font-weight: 400;
+            margin-bottom: px-to-rem(20);
+        }
+    }
+}

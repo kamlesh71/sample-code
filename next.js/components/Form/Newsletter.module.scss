@@ -1,0 +1,49 @@
+@import "../../scss/variables";
+@import "../../scss/mixin";
+
+.newsletterForm {
+    form {
+        .itemBottom {
+            align-items: flex-end;
+        }
+
+        .fieldWrapper {
+            margin-right: px-to-rem(20);
+
+            label {
+                color:$lightWhite;
+                font-size: px-to-rem(18);
+                font-weight: 300;
+            }
+    
+            input {
+                background-color: $lightGrey;
+            }
+        }
+
+        button {
+            width: 100%;
+            text-transform: uppercase;
+        }
+    }
+}
+
+//media query for mobile screen and ipad screens
+
+@media (max-width: 991.98px) { 
+    .newsletterForm {
+        form {
+            .fieldWrapper {
+                margin-right: 0;
+
+                label {
+                    margin-bottom: px-to-rem(3);
+                }
+
+                input {
+                    margin-bottom: px-to-rem(8);
+                }
+            }
+        }
+    }
+}

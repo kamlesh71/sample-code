@@ -1,0 +1,39 @@
+@import "../../scss/variables";
+@import "../../scss/mixin";
+
+.userHeading {
+    padding: px-to-rem(20) 0 px-to-rem(78);
+    text-align: center;
+    width: 100%;
+
+    .imgWrapper {
+        position: relative;
+        margin-bottom: px-to-rem(15);
+        display: inline-block;
+
+        img {
+            width: px-to-rem(120);
+            height: px-to-rem(120);
+            border-radius: 50%;
+        }
+
+        .iconWrapper {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: px-to-rem(40);
+            height: px-to-rem(40);
+            background-color: $secondary;
+            box-shadow: $lightShadow;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                height: px-to-rem(20);
+                width: px-to-rem(20);
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+@import "../../scss/variables";
+@import "../../scss/mixin";
+
+.updateProfileForm {
+    form {
+
+        .inputWrapper {
+            margin-bottom: px-to-rem(27);
+        }
+
+        label {
+            font-size: px-to-rem(18);
+            color: $primary;
+            margin-bottom: 0;
+            padding: px-to-rem(0) px-to-rem(16);
+            // line-height: 1.2;
+        }
+
+        .btnWrapper {
+            padding: px-to-rem(25) 0 px-to-rem(32);
+        }
+
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    .btnWrapper {
+        button {
+            width:100%;
+        }
+    }
+ }

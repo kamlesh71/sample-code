@@ -1,0 +1,13 @@
+@import "../../scss/variables";
+@import "../../scss/mixin";
+
+.sectionHeading {
+    margin-bottom: px-to-rem(60);
+
+    h2 {
+        font-size: px-to-rem(30);
+        text-align: center;
+        font-weight: 700;
+        color:$primary;
+    }
+}

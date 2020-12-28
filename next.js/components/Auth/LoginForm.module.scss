@@ -1,0 +1,70 @@
+@import "../../scss/variables";
+@import "../../scss/mixin";
+
+.loginForm {
+    .checkboxLabel {
+        margin-bottom: px-to-rem(26);
+
+        input {
+            height: px-to-rem(20);
+            width: px-to-rem(20);
+            border: solid $inputGrey !important;
+        }
+
+        label {
+            color: gray;
+            font-size: px-to-rem(18);
+            margin-left: px-to-rem(6);
+        }
+
+        a {
+            font-size: px-to-rem(18);
+            font-weight: 700;
+        }
+    }
+
+    button {
+        margin-bottom: px-to-rem(20);
+    }
+    
+}
+
+.orWrapper {
+    padding: px-to-rem(10) 0 px-to-rem(30);
+    text-align: center;
+
+    p {
+        margin-bottom: 0;
+        color: $secondary;
+        font-size: px-to-rem(20);
+
+        span {
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.socialLinks {
+    margin-bottom: px-to-rem(14);
+
+    svg {
+        margin-right: px-to-rem(3);
+        // font-size: px-to-rem(20);
+        font-size: px-to-rem(22);
+    }
+
+    
+}
+
+  
+    
+// media query
+
+// @media (max-width: 1599.98px) { 
+//     .socialLinks {
+//         svg {
+//             margin-right: px-to-rem(5);
+//         }
+//     }   
+// }
